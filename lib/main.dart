@@ -7,9 +7,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyFirstWidget(),
-    );
+    return App();
   }
 }
 
@@ -19,12 +17,16 @@ class MyFirstWidget1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     countbuild++;
+    returnruntime();
     print(countbuild);
-    // значение 1
     return Container(
         child: Center(
       child: Text('Hello'),
     ));
+  }
+
+  returnruntime() {
+    print(context.runtimeType);
   }
 }
 
@@ -40,10 +42,25 @@ class _nameState extends State<MyFirstWidget> {
   Widget build(BuildContext context) {
     countbuild++;
     print(countbuild);
+    returnruntime();
     // значение увеличивается с каждым hotreload
     return Container(
         child: Center(
       child: Text('Hello'),
     ));
+  }
+
+  returnruntime() {
+    print(context.runtimeType);
+  }
+}
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyFirstWidget(),
+      title: 'Tiiiile',
+    );
   }
 }
