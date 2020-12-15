@@ -11,9 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-    flutter_svg: ^0.19.2+1
-
+  flutter_svg: ^0.19.1
   cupertino_icons: ^1.0.0
 
 dev_dependencies:
@@ -21,12 +19,9 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
-
   assets:
-  - res
-
+    - res/
   fonts:
   - family: Roboto
     fonts:
