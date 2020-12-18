@@ -7,25 +7,28 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyFirstWidget(),
-    );
+    return App();
   }
 }
 
-class MyFirstWidget1 extends StatelessWidget {
-  int countbuild = 0;
+class MyFirstWidgetStateless extends StatelessWidget {
+  int countBuild = 0;
 
   @override
   Widget build(BuildContext context) {
-    countbuild++;
-    print(countbuild);
-    // значение 1
+    countBuild++;
+    // returnContextRuntime();
+    print(countBuild);
+    // print(context.runtimeType);
     return Container(
         child: Center(
       child: Text('Hello'),
     ));
   }
+
+  // returnContextRuntime() {
+  //   print(context.runtimeType);
+  // }
 }
 
 class MyFirstWidget extends StatefulWidget {
@@ -34,16 +37,30 @@ class MyFirstWidget extends StatefulWidget {
 }
 
 class _nameState extends State<MyFirstWidget> {
-  int countbuild = 0;
+  int countBuild = 0;
 
   @override
   Widget build(BuildContext context) {
-    countbuild++;
-    print(countbuild);
-    // значение увеличивается с каждым hotreload
+    countBuild++;
+    print(countBuild);
+    returnContextRuntime();
     return Container(
         child: Center(
       child: Text('Hello'),
     ));
+  }
+
+  returnContextRuntime() {
+    print(context.runtimeType);
+  }
+}
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyFirstWidget(),
+      title: 'Tiiiile',
+    );
   }
 }
