@@ -1,7 +1,9 @@
+// Интересное место
+
 class Sight {
   String name;
-  int lat;
-  int lon;
+  double lat;
+  double lon;
   String url;
   String details;
   String type;
