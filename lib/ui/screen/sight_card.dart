@@ -1,5 +1,8 @@
+/// Страница макета интересных мест
+
 import 'package:flutter/material.dart';
 import 'package:places/domain/sight.dart';
+import 'package:places/text-styles.dart';
 
 class SightCard extends StatelessWidget {
   final Sight sight;
@@ -40,11 +43,7 @@ class SightCard extends StatelessWidget {
                   left: 16,
                   child: Text(
                     sight.type,
-                    style: TextStyle(
-                      color: Colors.white,
-                      // fontWeight: FontWeight.w700,
-                      fontSize: 14,
-                    ),
+                    style: text14White,
                   ),
                 ),
 
@@ -78,11 +77,7 @@ class SightCard extends StatelessWidget {
                       sight.name,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        color: Colors.black,
-                        // fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                      ),
+                      style: textRegular16,
                     ),
                   ),
 
@@ -94,11 +89,7 @@ class SightCard extends StatelessWidget {
                       sight.details,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        color: Colors.grey,
-                        // fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                      ),
+                      style: text14Grey,
                     ),
                   ),
                 ],
